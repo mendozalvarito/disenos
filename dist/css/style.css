@@ -118,27 +118,38 @@ a {
   padding-top: 40px;
   font-size: 14px;
 }
-.aside .aside_content ul li a {
+.aside_content ul li a {
   padding: 10px;
   border-radius: 7px;
-  text-decoration: none;
   display: flex;
   align-items: center;
+  justify-items: center;
   color: var(--text-primary);
 }
-.aside .aside_content ul li a:hover {
+.aside_content ul li a:hover {
   background: var(--primary);
   color: white;
   transition: 5ms;
 }
-.aside .aside_content ul li a svg {
+.aside_content ul li a svg {
   width: 25px;
-  padding-right: 35px;
+  padding-right: 15px;
 }
-.aside .aside_content ul li a svg.drop {
+.aside_content ul li a svg.drop {
   width: 25px;
   padding: 0px;
-  padding-left: 30px;
+  padding-left: 15px;
+}
+.aside_content ul li ul{
+  font-size: 12px;
+  padding-left: 35px;
+  background: var(--ligth);
+}
+.aside_content ul li ul li a{
+  color: white;
+}
+.aside_content ul li ul li a svg{
+  width: 10px;
 }
 .main {
   grid-area: main;
