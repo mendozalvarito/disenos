@@ -6,6 +6,7 @@
   --primary: #19a9e6;
   --text-primary: #909599;
 }
+/* aplicamos estilos html */
 body {
   padding: 0px;
   margin: 0px;
@@ -19,6 +20,10 @@ ul {
 a {
   text-decoration: none;
 }
+a[href="submenu"]:focus{
+  pointer-events: none;
+}
+/* inicializacmos la grilla */
 .grid-container {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -40,24 +45,35 @@ a {
 }
 .header {
   grid-area: header;
+  padding: 0 16px 0 0;
 }
-.header .header_notify {
+.header_notify, .sidebar_btn, .header_profile{
   padding: 12px;
+  cursor: pointer;
+}
+.sidebar_btn svg{
+  width: 10px;
+  transition: 0.5s;
+  transition-property: color;
+}
+.sidebar_btn svg:hover{
+  color:var(--primary);
 }
 .header_notify svg {
   color: var(--back);
   width: 18px;
   margin-right: 10px;
+  transition: 0.5s;
+  transition-property: color;
 }
 .header_notify svg:hover{
   color: var(--primary);
-  transition: 0.5s;
 }
 .header .header_profile {
   display: flex;
   align-items: center;
-  padding: 12px;
-  cursor: pointer;
+  transition: 0.5s;
+  transition-property: color;
 }
 .header_profile img {
   width: 25px;
@@ -74,36 +90,36 @@ a {
 }
 .header_profile:hover{
   color: var(--primary);
-  transition: 0.5s;
 }
 .aside {
   grid-area: aside;
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 220px;
 }
 .aside .aside_header {
   background: var(--primary);
   margin: 0px;
   height: 80px;
 }
-.aside .aside_header .logo {
+.aside_header .logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 50px;
 }
-.aside .aside_header .logo svg {
+.logo svg {
   width: 30px;
   padding-right: 5px;
 }
-.aside .aside_header .logo span {
+.logo span {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 900;
 }
-.aside .aside_header .descrip {
+.aside_header .descrip {
   background: var(--ligth);
   font-size: 10px;
   font-weight: bold;
@@ -113,14 +129,16 @@ a {
 }
 .aside .aside_content {
   display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top: 40px;
   font-size: 14px;
 }
+.aside_content ul{
+  width: 100%;
+}
 .aside_content ul li a {
   padding: 10px;
-  border-radius: 7px;
+  padding-left: 20px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -131,6 +149,9 @@ a {
   color: white;
   transition: 5ms;
 }
+.aside_content ul li a:focus+ul{
+  display: block;
+}
 .aside_content ul li a svg {
   width: 25px;
   padding-right: 15px;
@@ -140,13 +161,17 @@ a {
   padding: 0px;
   padding-left: 15px;
 }
+.aside_content ul a+ul{
+  display: none;
+  transition: 0.5s;
+}
 .aside_content ul li ul{
   font-size: 12px;
-  padding-left: 35px;
   background: var(--ligth);
 }
 .aside_content ul li ul li a{
   color: white;
+  padding-left: 50px;
 }
 .aside_content ul li ul li a svg{
   width: 10px;
