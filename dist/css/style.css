@@ -177,8 +177,13 @@ a[href="submenu"]:focus{
 .aside_content ul li ul li a svg{
   width: 10px;
 }
+.grid-container.collapse aside{
+  width: 70px;
+}
 .main {
   grid-area: main;
+  width: 100%;
+  background: #909599;
 }
 .footer {
   grid-area: footer;
