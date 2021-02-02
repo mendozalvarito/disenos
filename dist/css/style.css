@@ -83,12 +83,7 @@ a[href="submenu"]:focus{
   border-radius: 25px;
   margin-right: 10px;
 }
-.header_profile span{
-  font-weight: 600;
-  letter-spacing: 1px;
-}
 .header_profile svg{
-  margin-left: 10px;
   width: 10px;
 }
 .header_profile .dropdown{
